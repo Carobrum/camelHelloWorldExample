@@ -1,0 +1,64 @@
+<<html>
+<head>
+	<title></title>
+
+<head>
+  <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <script type="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+</head>
+</head>
+<body>
+	<p id="Hola" class="animated bounce"> HOLA </p>
+<img src="walmartworldanimation_03_01.gif"> 
+
+
+
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+    $('#logo').each(function() {
+        animationHover(this, 'bounce');
+    });
+});
+</script>
+
+
+<script type="text/javascript">
+
+function animationHover(element, animation){
+    element = $(element);
+    element.hover(
+        function() {
+            element.addClass('animated ' + animation);        
+        },
+        function(){
+            //wait for animation to finish before removing classes
+            window.setTimeout( function(){
+                element.removeClass('animated ' + animation);
+            }, 2000);         
+        });
+}
+
+function animationClick(element, animation){
+    element = $(element);
+    element.click(
+        function() {
+            element.addClass('animated ' + animation);        
+            //wait for animation to finish before removing classes
+            window.setTimeout( function(){
+                element.removeClass('animated ' + animation);
+            }, 2000);         
+  
+        });
+}
+
+
+
+
+
+</script>
+</body>
+</html>
